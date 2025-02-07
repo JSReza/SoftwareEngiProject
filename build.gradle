@@ -4,7 +4,7 @@ plugins {
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
-eclipse.project.name = 'SoftwareEngiProject'
+eclipse.project.name = 'SoftwareEngiProject' //changed from WASDSoftwareEngiProject
 
 sourceSets {
 	main {
