@@ -1,3 +1,3 @@
-public class changeProfileResponse {
+public interface changeProfileResponse {
 
 }

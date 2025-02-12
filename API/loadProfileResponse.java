@@ -1,3 +1,5 @@
-public class loadProfileResponse {
+public interface loadProfileResponse {
+
+    boolean success();
 
 }
