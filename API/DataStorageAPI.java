@@ -1,3 +1,5 @@
+package annotations;
+
 public interface DataStorageAPI {
 
     @ProcessAPI
