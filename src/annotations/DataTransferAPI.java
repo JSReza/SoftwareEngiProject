@@ -1,3 +1,5 @@
+package annotations;
+
 @NetworkAPI
 public interface DataTransferAPI {
     void transferData(String source, String destination, String delimiter);
