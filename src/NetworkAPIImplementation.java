@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 import API_Package.*;
 =======
@@ -7,6 +8,9 @@ import API_Package.NetworkAPI;
 import API_Package.*;
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+import API_Package.NetworkAPI;
+>>>>>>> f1be917 (fixed errors in code)
 
 import java.lang.annotation.Annotation;
 

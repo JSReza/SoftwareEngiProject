@@ -1,4 +1,5 @@
 package API_Package;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -8,6 +9,11 @@ import main.interfaces.NetworkAPIPrototype;
 =======
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+import API_Package.DataTransferAPI;
+import main.interfaces.NetworkAPIPrototype;
+
+>>>>>>> f1be917 (fixed errors in code)
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;

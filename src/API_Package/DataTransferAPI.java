@@ -1,4 +1,5 @@
 package API_Package;
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 @NetworkAPI
 =======
@@ -8,6 +9,9 @@ package API_Package;
 @NetworkAPI
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+@API_Package.NetworkAPI
+>>>>>>> f1be917 (fixed errors in code)
 public interface DataTransferAPI {
     void transferData(String source, String destination, String delimiter);
 

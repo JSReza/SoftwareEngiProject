@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -31,11 +32,27 @@ public class DataTransferAPIImplementation implements DataTransferAPI{
 =======
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+import API_Package.DataTransferAPI;
+import java.util.List;
+
+public class DataTransferAPIImplementation implements DataTransferAPI {
+    public DataTransferAPIImplementation(NetworkAPIImplementation networkAPI) {
+        this.networkAPI = networkAPI;
+        this.bufferSize = 1024;
+    }
+
+        private final NetworkAPIImplementation networkAPI;
+        private final int bufferSize;
+
+
+>>>>>>> f1be917 (fixed errors in code)
 
         public void transferData(String source, String destination, String delimiter) {
 
         }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
         void convertDecimalToHex(int decimal, String destination) {
 =======
@@ -45,6 +62,9 @@ public class DataTransferAPIImplementation implements DataTransferAPI{
         void convertDecimalToHex(int decimal, String destination) {
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+        public void convertDecimalToHex(int decimal, String destination) {
+>>>>>>> f1be917 (fixed errors in code)
 
         }
 
@@ -54,6 +74,7 @@ public class DataTransferAPIImplementation implements DataTransferAPI{
 
     }
 
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 <<<<<<< HEAD
@@ -73,3 +94,5 @@ public class DataTransferAPIImplementation implements DataTransferAPI{
 =======
 >>>>>>> origin/main
 >>>>>>> Stashed changes
+=======
+>>>>>>> f1be917 (fixed errors in code)
