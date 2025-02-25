@@ -1,7 +1,5 @@
-package test.java;
-
 import java.util.List;
-import API_Package.DataStorageAPI;
+import API_Package.*;
 public class TestDataStorageAPI implements DataStorageAPI{
     private final TestInputConfig inputConfig;
     private final TestOutputConfig outputConfig;
