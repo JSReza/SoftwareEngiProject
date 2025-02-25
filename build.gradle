@@ -41,6 +41,7 @@ def protobufVersion = '3.25.1'
 def protocVersion = protobufVersion
 
 dependencies {
+  
     implementation "io.grpc:grpc-protobuf:${grpcVersion}"
     implementation "io.grpc:grpc-services:${grpcVersion}"
     implementation "io.grpc:grpc-stub:${grpcVersion}"

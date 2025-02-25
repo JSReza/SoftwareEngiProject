@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 // Import the DataStorageAPI class
 //import DataStorageAPI;
+=======
+>>>>>>> JRSecondBranch
 
 public class apiSmokeTest1 {
 

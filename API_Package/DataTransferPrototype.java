@@ -1,9 +1,4 @@
-<<<<<<< HEAD:src/annotations/DataTransferPrototype.java
-package annotations;
-
-=======
-package API;
->>>>>>> JRSecondBranch:API/DataTransferPrototype.java
+package API_Package;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
