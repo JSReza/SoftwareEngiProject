@@ -1,4 +1,7 @@
 import API_Package.*;
+
+import java.lang.annotation.Annotation;
+
 public class NetworkAPIImplementation implements NetworkAPI {
     private boolean isConnected;
     private String connectionStatus;
@@ -8,5 +11,10 @@ public class NetworkAPIImplementation implements NetworkAPI {
         this.port = port;
         this.isConnected = false;
         this.connectionStatus = "Disconnected";
+    }
+
+    @Override
+    public Class<? extends Annotation> annotationType() {
+        return null;
     }
 }

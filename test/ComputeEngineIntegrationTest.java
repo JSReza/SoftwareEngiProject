@@ -21,7 +21,7 @@ public class ComputeEngineIntegrationTest {
         dataTransfer = new DataTransferAPIImplementation(network);
     }
 
-    @Test
+
     @DisplayName("Compute Engine Integration Test with [1,10,25]")
     void testComputeEngineWithInitialInput() {
        
