@@ -1,5 +1,12 @@
+<<<<<<< Updated upstream
+package test.java;
+
+import java.util.List;
+import API_Package.DataStorageAPI;
+=======
 import java.util.List;
 import API_Package.*;
+>>>>>>> Stashed changes
 public class TestDataStorageAPI implements DataStorageAPI{
     private final TestInputConfig inputConfig;
     private final TestOutputConfig outputConfig;

@@ -8,6 +8,7 @@ package API;
 =======
 <<<<<<< HEAD:src/main/interfaces/DataTransferPrototype.java
 <<<<<<< HEAD:src/main/interfaces/DataTransferPrototype.java
+<<<<<<< HEAD:src/main/interfaces/DataTransferPrototype.java
 package main.interfaces;
 
 =======
@@ -21,6 +22,9 @@ package annotations;
 package API;
 >>>>>>> JRSecondBranch:API/DataTransferPrototype.java
 >>>>>>> origin/main:src/annotations/DataTransferPrototype.java
+<<<<<<< Updated upstream:src/annotations/DataTransferPrototype.java
+>>>>>>> Stashed changes:src/main/interfaces/DataTransferPrototype.java
+=======
 >>>>>>> Stashed changes:src/main/interfaces/DataTransferPrototype.java
 import java.io.BufferedReader;
 import java.io.FileReader;
