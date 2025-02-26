@@ -1,12 +1,5 @@
-<<<<<<< Updated upstream
 
-=======
-<<<<<<< HEAD
->>>>>>> Stashed changes
-import API_Package.NetworkAPI;
-=======
-import API_Package.*;
->>>>>>> origin/main
+import annotations.NetworkAPI;
 
 import java.lang.annotation.Annotation;
 

@@ -1,14 +1,4 @@
-<<<<<<< HEAD:src/main/interfaces/DataTransferAPI.java
-<<<<<<< HEAD:src/main/interfaces/DataTransferAPI.java
-package main.interfaces;
-=======
->>>>>>> origin/JRSecondBranch:API/DataTransferAPI.java
-=======
-<<<<<<< HEAD:src/annotations/DataTransferAPI.java
-package annotations;
-=======
->>>>>>> JRSecondBranch:API/DataTransferAPI.java
->>>>>>> origin/main:src/annotations/DataTransferAPI.java
+import API_Package.NetworkAPI;
 
 @NetworkAPI
 public interface DataTransferAPI {

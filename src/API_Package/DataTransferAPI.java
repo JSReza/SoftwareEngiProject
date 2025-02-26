@@ -4,4 +4,3 @@ public interface DataTransferAPI {
 
     void convertDecimalToHex(int decimal, String destination);
 }
-}
