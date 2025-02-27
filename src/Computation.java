@@ -1,6 +1,4 @@
 
-import java.util.*;
-import java.io.*;
 public class Computation {
     private static final int MAX_VALUE  = Integer.MAX_VALUE;;
     private static final int MIN_VALUE = 0;
@@ -16,7 +14,7 @@ public class Computation {
         }
     }
 
-    private String convertToHexString(int decimal) {
+    public String convertToHexString(int decimal) {
         if (decimal == 0) {
             return "0";
         }  

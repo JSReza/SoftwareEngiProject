@@ -2,6 +2,7 @@ package API_Package;
 public interface DataStorageAPI {
 
 
+
     void readData();
 
     void writeData();

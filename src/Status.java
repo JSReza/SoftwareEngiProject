@@ -1,4 +1,6 @@
 
-public enum Status {
-
+public  enum Status {
+    SUCCESS,
+    ERROR
 }
+
