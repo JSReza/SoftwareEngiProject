@@ -7,6 +7,12 @@ public class datastorageapiImplementation implements DataStorageAPI {
         this.storageLocation = storageLocation;
         this.isInitialized = false;
     }
+
+
+    public void readData(String st) {
+
+    }
+
     public void readData(){
 
     }
