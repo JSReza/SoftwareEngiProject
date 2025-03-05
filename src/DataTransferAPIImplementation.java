@@ -1,8 +1,6 @@
 
 import annotations.DataTransferAPI;
-
 import java.util.List;
-import java.util.zip.DataFormatException;
 
 public class DataTransferAPIImplementation implements DataTransferAPI {
 
