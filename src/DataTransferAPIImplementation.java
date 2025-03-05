@@ -1,20 +1,17 @@
 
-import annotations.DataTransferAPI;
+import main.java.DataTransferAPI;
 
 import java.util.List;
 
 public class DataTransferAPIImplementation implements DataTransferAPI {
 
+    final NetworkAPIImplementation networkAPI;
+    final int bufferSize;
 
-        final NetworkAPIImplementation networkAPI;
-        final int bufferSize;
-
-        public DataTransferAPIImplementation(NetworkAPIImplementation networkAPI){
-            this.networkAPI = networkAPI;
-            this.bufferSize = 1024;
-        }
-
-
+    public DataTransferAPIImplementation(NetworkAPIImplementation networkAPI) {
+        this.networkAPI = networkAPI;
+        this.bufferSize = 1024;
+    }
 
     public void transferData(String source, String destination, String delimiter) {
 
@@ -32,6 +29,3 @@ public class DataTransferAPIImplementation implements DataTransferAPI {
     public void sendData(List<String> outputData) {
     }
 }
-
-
-
