@@ -2,6 +2,7 @@
 import annotations.DataTransferAPI;
 
 import java.util.List;
+import java.util.zip.DataFormatException;
 
 public class DataTransferAPIImplementation implements DataTransferAPI {
 
@@ -16,8 +17,12 @@ public class DataTransferAPIImplementation implements DataTransferAPI {
 
 
 
-    public void transferData(String source, String destination, String delimiter) {
-
+    public void transferData(String source, String destination, String delimiter) throws IllegalStateException{
+        try{
+            //transfer data
+        }catch(IllegalStateException e){
+            //
+        }
     }
 
     public void convertDecimalToHex(int decimal, String destination) {

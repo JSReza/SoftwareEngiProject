@@ -11,21 +11,20 @@ public class DataStorageComponentAssign4 implements DataStorageAPI{
 
 
     @Override
-    public void readData(){
+    public void readData() throws NullPointerException {
         Scanner s = new Scanner(System.in);
         int data = s.nextInt();
         String output = computation.convertToHexString(data);
-        if(intStorage.containsKey(data)){
-            System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
-        }else{
-           System.out.println("cannot find number in storage");
+        try {
+            if (intStorage.containsKey(data)) {
+                System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
+            }
+                if (stringStorage.containsKey(output)) {
+                    System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
+                }
+        }catch(NullPointerException e){
+            System.out.println(data + " isn't in storage.");
         }
-        if(stringStorage.containsKey(output)){
-            System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
-        }else{
-            System.out.println("cannot find hex in storage");
-        }
-
     }
 
 
