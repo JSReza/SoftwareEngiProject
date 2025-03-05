@@ -1,10 +1,11 @@
 
-package annotations;
+package main.java;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.List;
 
 public class DataTransferPrototype implements DataTransferAPI {
 
@@ -43,5 +44,19 @@ public class DataTransferPrototype implements DataTransferAPI {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @NetworkAPIPrototype
+    @Override
+    public void sendData(List<String> data) {
+        // Implementation for sending a list of data
+        System.out.println("Sending data list: " + data);
+    }
+
+    @NetworkAPIPrototype
+    @Override
+    public void sendData() {
+        // Implementation for sending data without parameters
+        System.out.println("Sending data with default settings");
     }
 }

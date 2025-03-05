@@ -1,11 +1,8 @@
-
-package main.interfaces;
-
-import annotations.ProcessAPI;
+package main.java;
 import annotations.ProcessAPIPrototype;
+import annotations.ProcessAPI;
 
 public interface DataStorageAPI {
-
     @ProcessAPI
     void readData();
 

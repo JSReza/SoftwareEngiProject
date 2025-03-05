@@ -1,7 +1,7 @@
 
-import annotations.NetworkAPI;
-
 import java.lang.annotation.Annotation;
+
+import main.java.NetworkAPI;
 
 public class NetworkAPIImplementation implements NetworkAPI {
     private boolean isConnected;
