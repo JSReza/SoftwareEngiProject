@@ -3,7 +3,7 @@ import annotations.NetworkAPI;
 
 import java.lang.annotation.Annotation;
 
-public class NetworkAPIImplementation implements NetworkAPI {
+public class NetworkAPIImplementation implements NetworkAPI  {
     private boolean isConnected;
     private String connectionStatus;
     private final int port;
@@ -15,7 +15,11 @@ public class NetworkAPIImplementation implements NetworkAPI {
     }
 
     @Override
-    public Class<? extends Annotation> annotationType() {
-        return null;
+    public Class<? extends Annotation> annotationType() throws IllegalStateException{
+        try{
+            return null;
+        }catch(IllegalStateException e) {
+            return null;
+        }
     }
 }
