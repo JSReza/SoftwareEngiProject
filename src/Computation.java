@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 public class Computation {
     private char getHexDigit(int digit) {
@@ -32,3 +33,5 @@ public class Computation {
 
     
 }
+=======
+>>>>>>> JRAssignment7

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import annotations.NetworkAPI;
 
@@ -23,3 +24,5 @@ public class NetworkAPIImplementation implements NetworkAPI  {
         }
     }
 }
+=======
+>>>>>>> JRAssignment7
