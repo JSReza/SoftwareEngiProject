@@ -12,12 +12,12 @@ import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
-import annotations.ConceptualAPI;
-import annotations.ConceptualAPIPrototype;
-import annotations.NetworkAPI;
-import annotations.NetworkAPIPrototype;
-import annotations.ProcessAPI;
-import annotations.ProcessAPIPrototype;
+import main.java.ConceptualAPI;
+import main.java.ConceptualAPIPrototype;
+import main.java.NetworkAPI;
+import main.java.NetworkAPIPrototype;
+import main.java.ProcessAPI;
+import main.java.ProcessAPIPrototype;
 
 /**
  * This test checks that all 3 APIs exist in the 'src' folder as interfaces,
