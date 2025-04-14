@@ -1,15 +1,13 @@
+package API_Package;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-
-public class DataTransferPrototype implements DataTransferAPI {
+public class DataTransferPrototype{
 
     private static final String DEFAULT_DELIMITER = ",";
 
-    @NetworkAPIPrototype
-    @Override
     public void transferData(String source, String destination, String delimiter) {
         if (delimiter == null || delimiter.isEmpty()) {
             delimiter = DEFAULT_DELIMITER;
@@ -30,8 +28,7 @@ public class DataTransferPrototype implements DataTransferAPI {
         }
     }
 
-    @NetworkAPIPrototype
-    @Override
+
     public void convertDecimalToHex(int decimal, String destination) {
         String hexValue = Integer.toHexString(decimal);
 
