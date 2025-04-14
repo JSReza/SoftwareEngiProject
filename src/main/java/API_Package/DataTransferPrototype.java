@@ -1,5 +1,4 @@
-
-package main.java;
+package API_Package;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -9,9 +8,20 @@ import java.util.List;
 
 public class DataTransferPrototype implements DataTransferAPI {
 
+    @Override
+    public void sendData() {
+        System.out.println("Sending data with no parameters...");
+        // Add logic for sending data without parameters
+    }
+
+    @Override
+    public void sendData(List<String> outputData) {
+        System.out.println("Sending data: " + outputData);
+        // Add logic for sending data with a list of strings
+    }
+
     private static final String DEFAULT_DELIMITER = ",";
 
-    @NetworkAPIPrototype
     @Override
     public void transferData(String source, String destination, String delimiter) {
         if (delimiter == null || delimiter.isEmpty()) {
@@ -33,7 +43,6 @@ public class DataTransferPrototype implements DataTransferAPI {
         }
     }
 
-    @NetworkAPIPrototype
     @Override
     public void convertDecimalToHex(int decimal, String destination) {
         String hexValue = Integer.toHexString(decimal);
@@ -44,19 +53,5 @@ public class DataTransferPrototype implements DataTransferAPI {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    @NetworkAPIPrototype
-    @Override
-    public void sendData(List<String> data) {
-        // Implementation for sending a list of data
-        System.out.println("Sending data list: " + data);
-    }
-
-    @NetworkAPIPrototype
-    @Override
-    public void sendData() {
-        // Implementation for sending data without parameters
-        System.out.println("Sending data with default settings");
     }
 }

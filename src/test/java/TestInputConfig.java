@@ -1,3 +1,4 @@
+
 import java.util.*;
 public class TestInputConfig{
     private List<Integer> inputData;

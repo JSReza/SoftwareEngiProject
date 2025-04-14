@@ -1,10 +1,5 @@
-package test.java;
-
 import java.io.File;
 
-// Assuming NetworkAPI and ComputationCoordinator are part of the same package or imported
-import main.java.CoordinationComponent;
-import main.java.Computation;
 
 public class TestUser {
 
@@ -23,8 +18,14 @@ public class TestUser {
 		String[] numbers = input.split(String.valueOf(delimiter));
 		int[] intNumbers = new int[numbers.length];
 
+		// Add input validation to handle invalid data
 		for (int i = 0; i < numbers.length; i++) {
-			intNumbers[i] = Integer.parseInt(numbers[i].trim());
+			try {
+				intNumbers[i] = Integer.parseInt(numbers[i].trim());
+			} catch (NumberFormatException e) {
+				System.err.println("Invalid number format: " + numbers[i]);
+				intNumbers[i] = 0; // Default value or skip processing
+			}
 		}
 
 		// Call the convertDelimitedIntegersToHex method on the Computation class
@@ -32,6 +33,9 @@ public class TestUser {
 				.mapToObj(String::valueOf)
 				.collect(java.util.stream.Collectors.joining(String.valueOf(delimiter)));
 		String hexResult = computation.convertDelimitedIntegersToHex(delimitedNumbers);
+
+		// Use the coordinator to perform an operation (example: logging or coordination)
+		coordinator.coordinate(hexResult);
 
 		// Write the result to the output path (assuming a utility method for file
 		// writing)

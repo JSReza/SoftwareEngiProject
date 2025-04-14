@@ -1,5 +1,7 @@
 plugins {
     id 'com.google.protobuf' version '0.9.4'
+    id 'java'
+    id 'jvm-test-suite'
 }
 
 apply plugin: 'java'
@@ -7,20 +9,15 @@ apply plugin: 'eclipse'
 eclipse.project.name = 'SoftwareEngiProject' 
 
 sourceSets {
-	main {
-	  proto {
-	    srcDirs = ['protobuf']
-	  }
-	  java {
-		srcDirs = ['src',
-					'build/generated/source/proto/main/grpc',
-					'build/generated/source/proto/main/java']
-	  }
-	}
-	test {
-	  java {
-	     srcDirs = ['test']
-	  }
+    main {
+        java {
+            srcDirs = ['src/main/java']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test/java']
+        }
     }
 }
 
@@ -29,32 +26,32 @@ repositories {
 }
 
 test {
-    useJUnitPlatform()
-    
+    useJUnitPlatform() // Explicitly specify the test framework
+    dependencies {
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+    }
+
       filter {
         excludeTestsMatching "project.annotations.Assignment*"
       }
 }
 
-def grpcVersion = '1.59.1'
-def protobufVersion = '3.25.1'
-def protocVersion = protobufVersion
+ext {
+    grpcVersion = '1.59.1'
+    protobufVersion = '3.25.1'
+    protocVersion = protobufVersion
+}
 
 dependencies {
-  
-    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
-    implementation "io.grpc:grpc-services:${grpcVersion}"
-    implementation "io.grpc:grpc-stub:${grpcVersion}"
-    compileOnly "org.apache.tomcat:annotations-api:6.0.53"
-
-    runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
-
-    testImplementation "io.grpc:grpc-testing:${grpcVersion}"
-    testImplementation "io.grpc:grpc-inprocess:${grpcVersion}"
-
-    testImplementation('junit:junit:4.12')
-    testImplementation('org.junit.jupiter:junit-jupiter:5.10.2')
-	testImplementation('org.mockito:mockito-core:5.10.0')
+  runtimeOnly "io.grpc:grpc-netty-shaded:${grpcVersion}"
+  implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+  implementation "io.grpc:grpc-services:${grpcVersion}"
+  implementation "io.grpc:grpc-stub:${grpcVersion}"
+  compileOnly "org.apache.tomcat:annotations-api:6.0.53"
+  testImplementation "io.grpc:grpc-testing:${grpcVersion}"
+  testImplementation "io.grpc:grpc-inprocess:${grpcVersion}"
+  testImplementation 'org.mockito:mockito-core:5.10.0'
 }
 
 protobuf {

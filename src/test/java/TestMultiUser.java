@@ -1,5 +1,3 @@
-package test.java;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -8,20 +6,17 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import main.java.NetworkAPI; // Ensure this matches the actual package where NetworkAPI is defined
 
 import org.junit.Assert;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import main.java.CoordinationComponent;
 
 public class TestMultiUser {
 
 	// Change the type of this variable to the name you're using for your
 	// @NetworkAPI
 	// interface
-	private NetworkAPI coordinator;
+	private CoordinationComponent coordinator;
 
 	@BeforeEach
 	public void initializeComputeEngine() {
