@@ -1,4 +1,5 @@
 package networkapi;
+
 import io.grpc.stub.StreamObserver;
 import networkapi.NetworkApi.SendDataRequest;
 import networkapi.NetworkApi.SendDataResponse;
@@ -13,7 +14,7 @@ public class NetworkAPIService extends NetworkAPIGrpc.NetworkAPIImplBase {
 
         // Create a response
         SendDataResponse response = SendDataResponse.newBuilder()
-                .setStatus("Data received successfully")
+                .setStatus("Data received: " + data)
                 .build();
 
         // Send the response

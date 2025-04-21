@@ -1,5 +1,3 @@
-
-
 public class Computation {
     private char getHexDigit(int digit) {
         if (digit < 10) {
@@ -10,6 +8,7 @@ public class Computation {
     }
 
     public String convertToHexString(int input) {
+        long startTime = System.nanoTime(); // Start timing
         if (input == 0) {
             return "0";
         }
@@ -19,6 +18,8 @@ public class Computation {
             hex.insert(0, getHexDigit(modulo));
             input = input / 16;
         }
+        long endTime = System.nanoTime(); // End timing
+        System.out.println("convertToHexString execution time: " + (endTime - startTime) + " ns");
 
         return hex.toString().toUpperCase();
     }

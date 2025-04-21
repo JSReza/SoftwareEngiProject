@@ -1,4 +1,3 @@
-
 import java.util.*;
 import API_Package.DataStorageAPI;
 
@@ -49,6 +48,7 @@ public class DataStorageAPIImplementation implements DataStorageAPI {
     }
 
     public void writeData(int data) {
+        long startTime = System.nanoTime(); // Start timing
         String output = computation.convertToHexString(data);
         if (intStorage.containsKey(data)) {
             intStorage.replace(data, intStorage.get(data) + 1);
@@ -61,10 +61,11 @@ public class DataStorageAPIImplementation implements DataStorageAPI {
         } else {
             stringStorage.put(output, 1);
         }
+        long endTime = System.nanoTime(); // End timing
+        System.out.println("writeData execution time: " + (endTime - startTime) + " ns");
     }
 
     public void processData() {
         DataStorageAPI.super.processData();
     }
 }
-
