@@ -1,0 +1,233 @@
+Software Engineering Bottleneck Tests
+
+FIRST TEST
+convertToHexString execution time: 1900 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 15700 ns
+99798 has been converted to hex and is now 185D6
+Iteration execution time: 46700 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 15200 ns
+99799 has been converted to hex and is now 185D7
+Iteration execution time: 45600 ns
+convertToHexString execution time: 0 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 15700 ns
+99800 has been converted to hex and is now 185D8
+Iteration execution time: 43800 ns
+convertToHexString execution time: 0 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 16200 ns
+99801 has been converted to hex and is now 185D9
+Iteration execution time: 45300 ns
+convertToHexString execution time: 1800 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 15600 ns
+99802 has been converted to hex and is now 185DA
+Iteration execution time: 46200 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 28400 ns
+99803 has been converted to hex and is now 185DB
+Iteration execution time: 70300 ns
+convertToHexString execution time: 300 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 23300 ns
+99804 has been converted to hex and is now 185DC
+Iteration execution time: 54900 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 12700 ns
+99805 has been converted to hex and is now 185DD
+Iteration execution time: 35500 ns
+convertToHexString execution time: 3900 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 17400 ns
+99806 has been converted to hex and is now 185DE
+Iteration execution time: 52000 ns
+convertToHexString execution time: 200 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 13000 ns
+99807 has been converted to hex and is now 185DF
+Iteration execution time: 36100 ns
+convertToHexString execution time: 0 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 12300 ns
+99808 has been converted to hex and is now 185E0
+Iteration execution time: 34700 ns
+convertToHexString execution time: 200 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 16300 ns
+99809 has been converted to hex and is now 185E1
+Iteration execution time: 43400 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 14500 ns
+99810 has been converted to hex and is now 185E2
+Iteration execution time: 42500 ns
+convertToHexString execution time: 400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 29600 ns
+99811 has been converted to hex and is now 185E3
+Iteration execution time: 85600 ns
+convertToHexString execution time: 300 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 22000 ns
+99812 has been converted to hex and is now 185E4
+Iteration execution time: 70300 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 30400 ns
+99813 has been converted to hex and is now 185E5
+Iteration execution time: 86200 ns
+convertToHexString execution time: 300 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 18200 ns
+99814 has been converted to hex and is now 185E6
+Iteration execution time: 47700 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 16600 ns
+99815 has been converted to hex and is now 185E7
+Iteration execution time: 44900 ns
+convertToHexString execution time: 200 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 16600 ns
+99816 has been converted to hex and is now 185E8
+Iteration execution time: 44200 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 25200 ns
+99817 has been converted to hex and is now 185E9
+Iteration execution time: 90200 ns
+convertToHexString execution time: 200 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 22600 ns
+99818 has been converted to hex and is now 185EA
+Iteration execution time: 54100 ns
+convertToHexString execution time: 100 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 16800 ns
+99819 has been converted to hex and is now 185EB
+Iteration execution time: 49100 ns
+convertToHexString execution time: 0 ns
+convertToHexString execution time: 0 ns
+writeData execution time: 27100 ns
+99820 has been converted to hex and is now 185EC
+Iteration execution time: 83500 ns
+convertToHexString execution time: 400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 37700 ns
+99821 has been converted to hex and is now 185ED
+Iteration execution time: 195700 ns
+convertToHexString execution time: 700 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 32200 ns
+99822 has been converted to hex and is now 185EE
+simulateHighLoad execution time: 9473 ms
+Processing complete.
+
+
+Faster Implementation Test
+convertToHexString execution time: 200 ns
+writeData execution time: 5500 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 4500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 4500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 3700 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 7200 ns
+convertToHexString execution time: 1800 ns
+writeData execution time: 5700 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 30100 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 3800 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 3900 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 5000 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 3700 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 29800 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3900 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 300 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3300 ns
+convertToHexString execution time: 2000 ns
+writeData execution time: 5500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3800 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3300 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3200 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3100 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3300 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 3200 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 4700 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3300 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 4200 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 4000 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3300 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 3500 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3400 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3700 ns
+convertToHexString execution time: 1800 ns
+writeData execution time: 5700 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 4300 ns
+convertToHexString execution time: 100 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3800 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 3600 ns
+convertToHexString execution time: 200 ns
+writeData execution time: 4100 ns
+Performance test execution time: 46619700 ns
