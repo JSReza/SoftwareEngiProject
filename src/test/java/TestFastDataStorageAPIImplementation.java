@@ -1,6 +1,10 @@
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 public class TestFastDataStorageAPIImplementation {
 
@@ -18,10 +22,16 @@ public class TestFastDataStorageAPIImplementation {
         fastDataStorage.writeData(10);
         fastDataStorage.writeData(20);
 
-        // Simulate reading data
-        assertDoesNotThrow(() -> {
-            fastDataStorage.readData();
-        });
+        // Mock System.in using Mockito (simulate input if needed)
+        InputStream originalIn = System.in;
+        try {
+            System.setIn(new ByteArrayInputStream("dummy input".getBytes()));
+            assertDoesNotThrow(() -> {
+                fastDataStorage.readData();
+            });
+        } finally {
+            System.setIn(originalIn);
+        }
     }
 
     @Test
@@ -40,9 +50,15 @@ public class TestFastDataStorageAPIImplementation {
         fastDataStorage.writeData(255); // Hex representation is "FF"
         fastDataStorage.writeData(255);
 
-        // Simulate reading data
-        assertDoesNotThrow(() -> {
-            fastDataStorage.readData();
-        });
+        // Mock System.in using Mockito (simulate input if needed)
+        InputStream originalIn = System.in;
+        try {
+            System.setIn(new ByteArrayInputStream("dummy input".getBytes()));
+            assertDoesNotThrow(() -> {
+                fastDataStorage.readData();
+            });
+        } finally {
+            System.setIn(originalIn);
+        }
     }
 }
