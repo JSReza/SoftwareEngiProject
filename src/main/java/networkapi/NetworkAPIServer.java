@@ -1,8 +1,9 @@
 package networkapi;
 
+import java.io.IOException;
+
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
-import java.io.IOException;
 
 public class NetworkAPIServer {
 
@@ -11,6 +12,7 @@ public class NetworkAPIServer {
 
         Server server = ServerBuilder.forPort(port)
                 .addService(new NetworkAPIService())
+                .addService(new DataStoreAPIService())
                 .build();
 
         System.out.println("Starting gRPC server on port " + port);

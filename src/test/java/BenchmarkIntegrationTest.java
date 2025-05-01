@@ -31,6 +31,13 @@ public class BenchmarkIntegrationTest {
         System.out.println("Original implementation duration: " + originalDuration + " ns");
         System.out.println("Fast implementation duration: " + fastDuration + " ns");
 
+        try (java.io.FileWriter writer = new java.io.FileWriter("benchmark_results.txt", true)) {
+            writer.write("Original implementation duration: " + originalDuration + " ns\n");
+            writer.write("Fast implementation duration: " + fastDuration + " ns\n");
+        } catch (java.io.IOException e) {
+            e.printStackTrace();
+        }
+
         assertTrue(fastDuration <= originalDuration * 0.9,
                 "Fast implementation is not at least 10% faster than the original implementation");
     }

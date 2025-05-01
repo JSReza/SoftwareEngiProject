@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compute Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Compute Engine</h1>
+    <form id="compute-form">
+        <label for="input-data">Input Data:</label>
+        <textarea id="input-data" placeholder="Enter comma-separated integers (e.g., 1,2,3)"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="output-section" style="display: none;">
+        <p>Your file is ready for download: <a id="download-link" href="#">Download</a></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
