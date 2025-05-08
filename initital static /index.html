@@ -18,15 +18,31 @@
     </style>
 </head>
 <body>
-        <h1>Number to hex converter</h1>
+    <div class="container">
+        <div class = "columns">
+            <div class = "column is-half">
+        <h1 class = "title has-text-centered">Number to hex converter</h1>
+
         <form id = "computation-form">
+        <div class = "field">
             <label for="number">Number:</label>
             <input type="number" id="input" name="number"><br><br>
-            <input type="submit" value="Submit">
+        </div>
+        <div class = "field">
+           <button type = "submit" class = "button">Convert</button>
+        </div>
             </form>
-            <h2>Output:</h2>
-            <ul id="output"></ul>
+
+
+        <div class = "content">
+            <h2 class = "subtitle">Output:</h2>
+            <ul id="output" class="list"></ul>
+        </div>
+        </div>
+       
+
         <script src="static.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
