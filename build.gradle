@@ -1,7 +1,8 @@
 plugins {
+    id 'org.springframework.boot' version '3.1.0'
+    id 'io.spring.dependency-management' version '1.1.0'
     id 'com.google.protobuf' version '0.9.4'
     id 'java'
-    id 'jvm-test-suite'
 }
 
 apply plugin: 'java'
@@ -29,8 +30,10 @@ repositories {
 test {
     useJUnitPlatform() // Explicitly specify the test framework
     dependencies {
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.2'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.2'
+        testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
+        testRuntimeOnly 'org.junit.platform:junit-platform-launcher:1.10.2'
+        testImplementation 'org.junit.platform:junit-platform-engine:1.10.2'
+        testImplementation 'org.junit.platform:junit-platform-commons:1.10.2'
     }
 
       filter {
@@ -42,6 +45,7 @@ ext {
     grpcVersion = '1.59.1'
     protobufVersion = '3.25.1'
     protocVersion = protobufVersion
+    springBootVersion = '3.1.0'
 }
 
 dependencies {
@@ -52,7 +56,10 @@ dependencies {
   compileOnly "org.apache.tomcat:annotations-api:6.0.53"
   testImplementation "io.grpc:grpc-testing:${grpcVersion}"
   testImplementation "io.grpc:grpc-inprocess:${grpcVersion}"
-  testImplementation 'org.mockito:mockito-core:5.10.0'
+  testImplementation 'org.mockito:mockito-core:5.4.0'
+  implementation "org.springframework.boot:spring-boot-starter:${springBootVersion}"
+  implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+  testImplementation 'net.bytebuddy:byte-buddy:1.14.6'
 }
 
 protobuf {
@@ -61,6 +68,39 @@ protobuf {
         grpc { artifact = "io.grpc:protoc-gen-grpc-java:${grpcVersion}" }
     }
     generateProtoTasks {
-        all()*.plugins { grpc {} }
+        all().forEach { task ->
+            task.plugins {
+                grpc {}
+            }
+        }
+    }
+}
+
+tasks.named('bootRun') {
+    dependsOn 'build'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.compileJava.dependsOn(tasks.generateProto)
+
+bootJar {
+    mainClass = 'com.example.computeengine.ComputeEngineApplication'
+}
+
+bootRun {
+    mainClass = 'ComputeEngineApplication'
+}
+
+tasks.withType(Test) {
+    jvmArgs += "-Dnet.bytebuddy.experimental=true"
+}
+
+configurations {
+    all {
+        exclude group: 'io.r2dbc', module: 'r2dbc-spi'
     }
 }

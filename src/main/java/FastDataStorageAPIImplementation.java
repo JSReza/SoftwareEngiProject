@@ -1,4 +1,7 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
 import API_Package.DataStorageAPI;
 
 public class FastDataStorageAPIImplementation implements DataStorageAPI {
@@ -14,17 +17,21 @@ public class FastDataStorageAPIImplementation implements DataStorageAPI {
     @Override
     public void readData() {
         try (Scanner s = new Scanner(System.in)) {
-            int data = s.nextInt();
-            String output = computation.convertToHexString(data);
-            if (intStorage.containsKey(data)) {
-                System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
+            if (s.hasNextInt()) {
+                int data = s.nextInt();
+                String output = computation.convertToHexString(data);
+                if (intStorage.containsKey(data)) {
+                    System.out.println(data + " is present in the storage " + intStorage.get(data) + " times");
+                } else {
+                    System.out.println("cannot find number in storage");
+                }
+                if (stringStorage.containsKey(output)) {
+                    System.out.println(data + " is present in the storage " + stringStorage.get(output) + " times");
+                } else {
+                    System.out.println("cannot find hex in storage");
+                }
             } else {
-                System.out.println("cannot find number in storage");
-            }
-            if (stringStorage.containsKey(output)) {
-                System.out.println(data + " is present in the storage " + stringStorage.get(output) + " times");
-            } else {
-                System.out.println("cannot find hex in storage");
+                System.out.println("Invalid input. Please enter an integer.");
             }
         }
     }
@@ -32,10 +39,14 @@ public class FastDataStorageAPIImplementation implements DataStorageAPI {
     @Override
     public void writeData() {
         try (Scanner s = new Scanner(System.in)) {
-            int data = s.nextInt();
-            String output = computation.convertToHexString(data);
-            intStorage.put(data, intStorage.getOrDefault(data, 0) + 1);
-            stringStorage.put(output, stringStorage.getOrDefault(output, 0) + 1);
+            if (s.hasNextInt()) {
+                int data = s.nextInt();
+                String output = computation.convertToHexString(data);
+                intStorage.put(data, intStorage.getOrDefault(data, 0) + 1);
+                stringStorage.put(output, stringStorage.getOrDefault(output, 0) + 1);
+            } else {
+                System.out.println("Invalid input. Please enter an integer.");
+            }
         }
     }
 
@@ -48,6 +59,7 @@ public class FastDataStorageAPIImplementation implements DataStorageAPI {
         System.out.println("writeData execution time: " + (endTime - startTime) + " ns");
     }
 
+    @Override
     public void processData() {
         DataStorageAPI.super.processData();
     }

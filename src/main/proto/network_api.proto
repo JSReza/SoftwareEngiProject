@@ -4,15 +4,20 @@ package networkapi;
 
 // Define the request message
 message SendDataRequest {
-    required string data = 1;
+    optional string data = 1;
 }
 
 // Define the response message
 message SendDataResponse {
-    required string status = 1;
+    optional string status = 1;
 }
 
 // Define the gRPC service
 service NetworkAPI {
     rpc SendData(SendDataRequest) returns (SendDataResponse);
+}
+
+// Define the second gRPC service for the data store process
+service DataStoreAPI {
+    rpc StoreData(SendDataRequest) returns (SendDataResponse);
 }
